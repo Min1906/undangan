@@ -2,9 +2,8 @@
  * COUNTDOWN TIMER & CALENDAR LINK GENERATOR
  */
 
-// Target Wedding Date (Tahun-Bulan-Hari Jam:Menit:Detik)
-// Silakan sesuaikan tanggal target pernikahan di sini
-const WEDDING_DATE = new Date('2027-04-18T08:00:00+07:00');
+// Target Wedding Date: 13 Desember 2026 pukul 09:00 WIB
+const WEDDING_DATE = new Date('2026-12-13T09:00:00+07:00');
 
 function initCountdown() {
   const daysEl = document.getElementById('count-days');
@@ -24,8 +23,13 @@ function initCountdown() {
       hoursEl.textContent = '00';
       minutesEl.textContent = '00';
       secondsEl.textContent = '00';
-      if (countdownWrap) {
-        countdownWrap.insertAdjacentHTML('afterend', '<p class="text-gold" style="font-weight:600;margin-top:1rem;">Acara Bahagia Telah Berlangsung</p>');
+      if (countdownWrap && !document.getElementById('countdown-finished-msg')) {
+        const msg = document.createElement('p');
+        msg.id = 'countdown-finished-msg';
+        msg.className = 'text-gold';
+        msg.style.cssText = 'font-weight:600;margin-top:1rem;';
+        msg.textContent = 'Acara Bahagia Sedang/Telah Berlangsung';
+        countdownWrap.insertAdjacentElement('afterend', msg);
       }
       return;
     }
@@ -52,13 +56,13 @@ function initGoogleCalendarBtn() {
 
   btn.addEventListener('click', (e) => {
     e.preventDefault();
-    const title = encodeURIComponent('The Wedding of Arya & Anindya');
-    const details = encodeURIComponent('Pernikahan Arya Danendra & Anindya Kirana. Doa restu Anda merupakan kehormatan dan kebahagiaan bagi kami.');
-    const location = encodeURIComponent('Grand Ballroom Plataran Dharmawangsa, Jakarta Selatan');
+    const title = encodeURIComponent('The Wedding of Rian & Herfita');
+    const details = encodeURIComponent('Pernikahan Rian Galih Firnanda & Herfita Oktavyana Dwi Savitri. Doa restu Anda merupakan kehormatan dan kebahagiaan bagi kami sekeluarga.');
+    const location = encodeURIComponent('Kediaman Bapak Sudarto (Hiburan: Campursari)');
     
-    // Format YYYYMMDDTHHmmssZ
-    const startDate = '20270418T010000Z'; // 08:00 WIB = 01:00 UTC
-    const endDate = '20270418T070000Z';   // 14:00 WIB = 07:00 UTC
+    // Format YYYYMMDDTHHmmssZ (13 Desember 2026, 09:00 - 16:00 WIB = 02:00 - 09:00 UTC)
+    const startDate = '20261213T020000Z';
+    const endDate = '20261213T090000Z';
     
     const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
     window.open(url, '_blank');

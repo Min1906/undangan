@@ -219,7 +219,7 @@ function initWhatsAppShareModal() {
       const baseUrl = window.location.origin + window.location.pathname;
       const targetUrl = `${baseUrl}?to=${encodeURIComponent(name)}`;
       
-      const message = `Kepada Yth. ${name},%0A%0ATanpa mengurangi rasa hormat, perkenankan kami mengundang Anda untuk menghadiri hari bahagia kami:%0A%0A*The Wedding of Arya & Anindya*%0A🗓️ Minggu, 18 April 2027%0A📍 Grand Ballroom Plataran Dharmawangsa, Jakarta%0A%0ABerikut tautan undangan resmi Anda:%0A${encodeURIComponent(targetUrl)}%0A%0AMerupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa restu.%0A%0ATerima kasih,%0AArya & Anindya`;
+      const message = `Kepada Yth. ${name},%0A%0ATanpa mengurangi rasa hormat, perkenankan kami mengundang Anda untuk menghadiri hari bahagia kami:%0A%0A*The Wedding of Rian & Herfita*%0A🗓️ Minggu, 13 Desember 2026%0A📍 Kediaman Bapak Sudarto (Hiburan: Campursari)%0A%0ABerikut tautan undangan resmi Anda:%0A${encodeURIComponent(targetUrl)}%0A%0AMerupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa restu.%0A%0ATerima kasih,%0ARian & Herfita`;
       
       outputText.value = decodeURIComponent(message);
       

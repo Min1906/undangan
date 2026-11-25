@@ -2,35 +2,35 @@
  * RSVP & WISHES MANAGEMENT (LOCALSTORAGE + EMOJI REACTIONS + MODERATION)
  */
 
-const STORAGE_KEY_RSVP = 'wedding_invitation_rsvps_v2';
-const STORAGE_KEY_WISHES = 'wedding_invitation_wishes_v2';
+const STORAGE_KEY_RSVP = 'wedding_invitation_rsvps_rian_herfita';
+const STORAGE_KEY_WISHES = 'wedding_invitation_wishes_rian_herfita';
 const ADMIN_PIN = '1234'; // Default PIN moderasi untuk menghapus ucapan tidak pantas
 
 // Data awal jika LocalStorage masih kosong
 const DEFAULT_WISHES = [
   {
     id: 'wish-1',
-    name: 'Dimas Prasetyo & Istri',
-    relationship: 'Sahabat Kuliah',
-    text: 'Selamat ya Arya dan Anindya! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah, dan lekas dikaruniai momongan yang sholeh/sholehah. Lancar sampai hari H!',
+    name: 'Dimas Prasetyo & Keluarga',
+    relationship: 'Sahabat',
+    text: 'Selamat untuk Mas Rian dan Mbak Herfita! Semoga menjadi keluarga yang sakinah, mawaddah, warahmah, dan lekas dikaruniai keturunan yang sholeh/sholehah. Lancar sampai hari H dan acara unduh mantunya!',
     time: Date.now() - 3600000 * 24 * 2,
-    reactions: { love: 14, pray: 9, clap: 6 }
+    reactions: { love: 18, pray: 14, clap: 8 }
   },
   {
     id: 'wish-2',
-    name: 'dr. Sarah Nabila',
-    relationship: 'Teman Kantor',
-    text: 'Barakallahu lakuma wa baraka alaikuma wa jama\'a bainakuma fii khoir. Turut berbahagia untuk kedua mempelai!',
+    name: 'Keluarga Bpk. H. Sukardi',
+    relationship: 'Keluarga Besar',
+    text: 'Barakallahu lakuma wa baraka alaikuma wa jama\'a bainakuma fii khoir. Turut berbahagia untuk kedua keluarga besar Bapak Parji dan Bapak Jatmiko!',
     time: Date.now() - 3600000 * 12,
-    reactions: { love: 8, pray: 16, clap: 4 }
+    reactions: { love: 12, pray: 25, clap: 6 }
   },
   {
     id: 'wish-3',
-    name: 'Keluarga Bpk. H. Rahmat',
-    relationship: 'Keluarga Besar',
-    text: 'Semoga cinta kasih kalian senantiasa diberkahi Allah SWT sepanjang hayat. Mohon maaf tidak bisa hadir beramai-ramai, doa terbaik dari kami sekeluarga di Surabaya.',
+    name: 'Rekan Kerja & Sahabat',
+    relationship: 'Teman Kerja',
+    text: 'Selamat menempuh hidup baru Rian & Fita! Semoga senantiasa diberikan kelancaran rezeki, kerukunan, dan kebahagiaan seumur hidup. Sampai ketemu di resepsi campursari!',
     time: Date.now() - 3600000 * 2,
-    reactions: { love: 19, pray: 22, clap: 11 }
+    reactions: { love: 21, pray: 19, clap: 15 }
   }
 ];
 
